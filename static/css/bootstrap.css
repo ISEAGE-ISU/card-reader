@@ -197,7 +197,7 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-    width: 940px;
+    width: 100%;
 }
 
 .span12 {
@@ -754,9 +754,9 @@ input,
 button,
 select,
 textarea {
-    font-size: 13px;
+    font-size: 23px;
     font-weight: normal;
-    line-height: 18px;
+    line-height: 28px;
 }
 
 input,
@@ -789,11 +789,12 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     display: inline-block;
-    height: 18px;
+    height: 28px;
     padding: 4px;
-    margin-bottom: 9px;
-    font-size: 13px;
-    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    font-size: 23px;
+    line-height: 28px;
     color: #555555;
 }
 
