@@ -57,7 +57,7 @@ class MainHandler(webapp2.RequestHandler):
             name = json_output['name']
             email = json_output['email']
 
-            submission = models.Submission.all().filter('uid =', uid).fetch(1)
+            submission = models.Fall2013ISUCDC.all().filter('email =', email).fetch(1)
             if submission:
                 context = {'name' : name}
                 context['refresh'] = True
@@ -73,7 +73,7 @@ class MainHandler(webapp2.RequestHandler):
                     self.response.out.write(template.render(path, context))
 
                 else:
-                    submission = models.Submission(name=name, email=email, uid=uid)
+                    submission = models.Fall2013ISUCDC(name=name, email=email, uid=uid)
                     submission.save()
 
                     context = {'name' : name}
@@ -86,7 +86,4 @@ class MainHandler(webapp2.RequestHandler):
             self.response.out.write(template.render(path, context))
 
 
-app = webapp2.WSGIApplication([('/', MainHandler),
-
-                                ],
-                              debug=True)
+app = webapp2.WSGIApplication([('/', MainHandler)], debug=True)
